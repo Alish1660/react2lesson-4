@@ -1,10 +1,9 @@
-import { Button } from "@mui/material";
-import TextField from "@mui/material/TextField";
 import { useState } from "react";
-import { auth } from "@service";
+import { Button, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { auth } from "@service";
 
 const Index = () => {
   const [form, setForm] = useState({});
@@ -21,6 +20,7 @@ const Index = () => {
       if (response.status === 200) {
         localStorage.setItem("access_token", response?.data.access_token);
         toast.success("Successfully logged in!");
+        // Example: Navigate to dashboard or home page after successful login
       } else {
         toast.error("Access denied. Please check your credentials.");
       }
@@ -56,7 +56,7 @@ const Index = () => {
               name="password"
             />
 
-            <Button variant="contained" type="submit">
+            <Button variant="contained" fullWidth type="submit">
               Sign In
             </Button>
           </form>
