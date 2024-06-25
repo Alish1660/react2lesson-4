@@ -25,9 +25,7 @@ const SignUpModal = ({ open, handleClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically handle the verification code submission logic
     console.log("Verification code:", code);
-    // Example: Navigate to home page after successful verification
     navigate("/");
   };
 

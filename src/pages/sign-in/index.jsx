@@ -20,7 +20,6 @@ const Index = () => {
       if (response.status === 200) {
         localStorage.setItem("access_token", response?.data.access_token);
         toast.success("Successfully logged in!");
-        // Example: Navigate to dashboard or home page after successful login
       } else {
         toast.error("Access denied. Please check your credentials.");
       }
